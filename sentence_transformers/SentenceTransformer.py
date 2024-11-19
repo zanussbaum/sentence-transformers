@@ -1527,6 +1527,7 @@ print(similarities)
 
         transformer_model = Transformer(
             model_name_or_path,
+            max_seq_length=tokenizer_kwargs.get("model_max_length", None),
             cache_dir=cache_folder,
             model_args=model_kwargs,
             tokenizer_args=tokenizer_kwargs,
